@@ -23,3 +23,12 @@ API Created :
           Input format : form-data containing fields as user_id(ObjectId,required), name(String,required), phone(String,required), email(String,unique,required), image(Only One image is allowed)
 ![image](https://github.com/rectifier796/backend_socket/assets/108865347/112b83a8-e0c4-4cb5-a351-e77627c6611e)
 ![image](https://github.com/rectifier796/backend_socket/assets/108865347/432ba5df-ae04-4d85-b1a7-a88f5b9f2ec0)
+
+Real time Chat : 
+1. Real time chat is implemented using socket.io library.
+2. Message is emitted on event "message".
+3. Here, only public chat is implemented i.e. if one user emit on event, then it is emitted to all other connected users.
+
+Models Created : 
+1. userModel : To store user's data. Contains fields as name(string), phone(string), email(string), image(string).
+2. chatModel : To store message details. Contains fields as sender(ObjectId), receiver(ObjectId), content(string).
